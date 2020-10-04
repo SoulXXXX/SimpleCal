@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+
+
+
+    <title>FORM Text</title>
+
+
+
+    <style>
+        /* Basic Grey */
+
+
+
+        .basic-grey {
+
+
+
+            margin-left: auto;
+
+
+
+            margin-right: auto;
+
+
+
+            max-width: 500px;
+
+
+
+            background: #F7F7F7;
+
+
+
+            padding: 25px 15px 25px 10px;
+
+
+
+            font: 12px Georgia, "Times New Roman", Times, serif;
+
+
+
+            color: #888;
+
+
+
+            text-shadow: 1px 1px 1px #FFF;
+
+
+
+            border: 1px solid #E4E4E4;
+
+
+
+        }
+
+
+
+        .basic-grey h1 {
+
+
+
+            font-size: 25px;
+
+
+
+            padding: 0px 0px 10px 40px;
+
+
+
+            display: block;
+
+
+
+            border-bottom: 1px solid #E4E4E4;
+
+
+
+            margin: -10px -15px 30px -10px;
+            ;
+
+
+
+            color: #888;
+
+
+
+        }
+
+
+
+        .basic-grey h1>span {
+
+
+
+            display: block;
+
+
+
+            font-size: 11px;
+
+
+
+        }
+
+
+
+        .basic-grey label {
+
+
+
+            display: block;
+
+
+
+            margin: 0px;
+
+
+
+        }
+
+
+
+        .basic-grey label>span {
+
+
+
+            float: left;
+
+
+
+            width: 20%;
+
+
+
+            text-align: right;
+
+
+
+            padding-right: 10px;
+
+
+
+            margin-top: 10px;
+
+
+
+            color: #888;
+
+
+
+        }
+
+
+
+        .basic-grey input[type="text"],
+        .basic-grey input[type="email"],
+        .basic-grey textarea,
+        .basic-grey select {
+
+
+
+            border: 1px solid #DADADA;
+
+
+
+            color: #888;
+
+
+
+            height: 30px;
+
+
+
+            margin-bottom: 16px;
+
+
+
+            margin-right: 6px;
+
+
+
+            margin-top: 2px;
+
+
+
+            outline: 0 none;
+
+
+
+            padding: 3px 3px 3px 5px;
+
+
+
+            width: 70%;
+
+
+
+            font-size: 12px;
+
+
+
+            line-height: 15px;
+
+
+
+            box-shadow: inset 0px 1px 4px #ECECEC;
+
+
+
+            -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+
+
+
+            -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+
+
+
+        }
+
+
+
+        .basic-grey textarea {
+
+
+
+            padding: 5px 3px 3px 5px;
+
+
+
+        }
+
+
+
+        .basic-grey select {
+
+
+
+            background: #FFF url('down-arrow.png') no-repeat right;
+
+
+
+            background: #FFF url('down-arrow.png') no-repeat right;
+
+
+
+            appearance: none;
+
+
+
+            -webkit-appearance: none;
+
+
+
+            -moz-appearance: none;
+
+
+
+            text-indent: 0.01px;
+
+
+
+            text-overflow: '';
+
+
+
+            width: 70%;
+
+
+
+            height: 35px;
+
+
+
+            line-height: 25px;
+
+
+
+        }
+
+
+
+        .basic-grey textarea {
+
+
+
+            height: 100px;
+
+
+
+        }
+
+
+
+        .basic-grey .button {
+
+
+
+            background: #E27575;
+
+
+
+            border: none;
+
+
+
+            padding: 10px 25px 10px 25px;
+
+
+
+            color: #FFF;
+
+
+
+            box-shadow: 1px 1px 5px #B6B6B6;
+
+
+
+            border-radius: 3px;
+
+
+
+            text-shadow: 1px 1px 1px #9E3F3F;
+
+
+
+            cursor: pointer;
+
+
+
+        }
+
+
+
+        .basic-grey .button:hover {
+
+
+
+            background: #CF7A7A
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <form action="" method="post" class="basic-grey">
+
+
+
+        <h1>价格计算器
+
+
+
+            <span>
+                请填写以下表单
+            </span>
+
+
+
+        </h1>
+
+
+
+        <label>
+
+
+
+            <span>卡价(美元)：</span>
+            <input id="CardPrice" type="text" name="CardPrice" />
+            </input>
+        </label>
+        <label>
+
+
+
+            <span>美国本土邮费(美元)：</span>
+
+
+
+            <input id="Postage" type="text" name="Postage" />
+
+
+
+        </label>
+
+
+
+        <label>
+
+
+
+            <span>汇率(实时汇率咨询Blake)：</span>
+
+
+
+            <input id="ExchangeRate" type="text" name="ExchangeRate" />
+
+
+
+        </label>
+
+
+
+
+
+
+
+        <label>
+
+
+
+            <span>对应代购费(人民币)：</span>
+
+
+
+            <input id="ServiceCharge" type="text" name="ServiceCharge" disabled />
+
+
+
+        </label>
+
+
+
+        <label>
+
+
+
+            <span>保险(固定)：</span>
+
+
+
+            <input id="Insurance" type="text" name="Insurance" placeholder="3%" disabled />
+
+
+
+        </label>
+
+
+
+        <label>
+
+
+
+            <span>&nbsp;</span>
+
+
+
+            <input type="button" class="button" onclick="Calculate()" value="计算" />
+
+
+
+        </label>
+
+
+        <label>
+
+
+
+            <span>计算结果</span>
+
+
+
+            <input id="Result" type="text" name="name" disabled />
+
+
+
+        </label>
+
+    </form>
+
+
+
+    <script>
+        function changeStyle() {
+
+
+
+            var template = document.getElementById("template");
+
+
+
+            var index = template.selectedIndex;
+
+
+
+            var templatevalue = template.options[index].value;
+
+
+
+            var templatecss = document.getElementById("templatecss");
+
+
+
+            templatecss.setAttribute("href", "css/" + templatevalue + ".css");
+
+
+
+            document.getElementsByTagName("form")[0].setAttribute("class", templatevalue);
+
+
+
+        }
+
+        function Calculate() {
+            var CardPrice = getCardPrice();
+            var ExchangeRate = getExchangeRate();
+            var Postage = getPostage();
+            var Price =
+                (Number(CardPrice) + Number(Postage)) * Number(ExchangeRate) * 1.03;
+            var ServiceCharge;
+            if (Price < 100) ServiceCharge = 20;
+            else if (Price < 500) ServiceCharge = 30;
+            else if (Price < 1000) ServiceCharge = 40;
+            else if (Price < 3000) ServiceCharge = 60;
+            else ServiceCharge = Price * 0.02;
+            sendResult(Price + ServiceCharge);
+            sendResult2(ServiceCharge);
+        }
+
+        function sendResult(result_1) {
+            var num = document.getElementById("Result");
+            num.placeholder = result_1;
+        }
+
+        function sendResult2(result_2) {
+            var num = document.getElementById("ServiceCharge");
+            num.value = result_2;
+        }
+
+        function getCardPrice() {
+            var CardPrice = document.getElementById("CardPrice").value;
+            return CardPrice;
+        }
+
+        //获取汇率
+        function getExchangeRate() {
+            var ExchangeRate = document.getElementById("ExchangeRate").value;
+            return ExchangeRate;
+        }
+        //获取邮费
+        function getPostage() {
+            var Postage = document.getElementById("Postage").value;
+            return Postage;
+        }
+        //代购费
+        function getServiceCharge() {
+            var ServiceCharge = document.getElementById("ServiceCharge").value;
+            return ServiceCharge;
+        }
+    </script>
+
+
+
+</body>
+
+
+
+</html>
